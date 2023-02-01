@@ -51,17 +51,17 @@ public class BugScript : MonoBehaviour
         {
             patrol = false;
             transform.position = Vector2.MoveTowards(transform.position, playerT.position, Mathf.Abs(speed) * Time.deltaTime);
-            /*if (playerT.position.x - 0.1f > transform.position.x && !facingRight)
+            if (playerT.position.x - 0.1f > transform.position.x && !facingRight)
             {
-                //Flip();
-                transform.position = Vector2.MoveTowards(transform.position, playerT.position, speed * Time.deltaTime);
+                Flip();
+                
             }
 
             if (playerT.position.x + 0.1f < transform.position.x && facingRight)
             {
-                //Flip();
-                transform.position = Vector2.MoveTowards(transform.position, playerT.position, speed * Time.deltaTime);
-            }*/
+                Flip();
+                
+            }
         }
         if(distToPlayer >= range)
         {

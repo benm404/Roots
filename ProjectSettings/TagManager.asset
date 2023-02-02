@@ -10,6 +10,8 @@ TagManager:
   - Enemy
   - Leaf
   - EnemyTrigger
+  - Ladder
+  - SceneSwitcher
   layers:
   - Default
   - TransparentFX

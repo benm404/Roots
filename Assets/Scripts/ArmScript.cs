@@ -56,7 +56,7 @@ public class ArmScript : MonoBehaviour
         }
         if (Input.GetMouseButton(0) && GM.growBar.value > 0f)
         {
-            tr.Find("Arm").localScale += new Vector3(growSpeed, 0f, 0f);
+            tr.Find("Arm").localScale += new Vector3(growSpeed * Time.deltaTime, 0f, 0f);
             mouseDown = true;
         }
         if (Input.GetMouseButtonUp(0) && mouseDown)
@@ -64,6 +64,7 @@ public class ArmScript : MonoBehaviour
             Transform Branch = Instantiate(tr.Find("Arm"), BranchPos, ArmAngle);
             Branch.AddComponent<Rigidbody2D>();
             Branch.tag = "Ground";
+            Branch.Find("ArmModel").tag = "Ground";
             tr.Find("Arm").localScale = defScale;
             mouseDown = false;
         }

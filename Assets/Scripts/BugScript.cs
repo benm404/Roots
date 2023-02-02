@@ -104,10 +104,10 @@ public class BugScript : MonoBehaviour
 
         if (collision.CompareTag("Player"))
         {
-            HP -= 10;
-            speed = 0;
+            //HP -= 10;
+            //speed = 0;
             //anim.SetTrigger("isDead");
-            col.enabled = false;
+            //col.enabled = false;
         }
     }
 

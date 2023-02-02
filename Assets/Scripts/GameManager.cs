@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -8,7 +9,7 @@ public class GameManager : MonoBehaviour
     public float growAdd = 15f;
     public Slider growBar;
 
-    public int leaves = 10;
+    public int leaves = 6;
     public TextMeshProUGUI leafText;
 
     void Start()
@@ -29,7 +30,20 @@ public class GameManager : MonoBehaviour
 
     public void WaterCollect()
     {
+        
         growBar.value += growAdd;
-        leaves += 5;
+        leaves += 2;
+        if (leaves >= 8)
+        {
+            leaves = 8;
+        }
+
+        if(growBar.value >= 100f)
+        {
+            growBar.value = 100f;
+        }
+            
     }
+
+    
 }
